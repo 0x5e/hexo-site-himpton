@@ -1,10 +1,12 @@
-title: Hexo
-subtitle: "A fast, simple & powerful blog framework powered by Node.js."
-description: "Hexo is a fast, simple & powerful blog framework powered by Node.js."
-author: Tommy Chen
-language: en
-timezone: UTC
-url: https://hexo.io
+title: 浙江海普顿新材料有限公司
+subtitle: 甲基锡热稳定剂|钙锌复合稳定剂|液体复合热稳定剂|PVC润滑剂
+description: 甲基锡热稳定剂|钙锌复合稳定剂|液体复合热稳定剂|PVC润滑剂
+author: gaosen
+language:
+- zh-cn
+- en
+timezone: Asia/Shanghai
+url: http://www.himpton.com
 root: /
 permalink: news/:year/:month/:day/:title/
 archive_dir: news
@@ -19,6 +21,6 @@ per_page: 0
 theme: navy
 deploy:
   type: git
-  repo: git@github.com:hexojs/hexojs.github.io.git
+  repo: git@github.com:0x5e/himpton.git
 
 # google_analytics:

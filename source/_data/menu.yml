@@ -1,5 +1,8 @@
-docs: /docs/
-api: /api/
-news: /news/
-plugins: /plugins/
-themes: /themes/
+home: /
+about: /pages/about.html
+product: /products/index.html
+research: /pages/research.html
+honor: /pages/honor.html
+sales: /pages/sales.html
+order: /pages/order.html
+contact: /pages/contact.html

@@ -1,0 +1,20 @@
+pages:
+  HTM:
+    HTM2010: /products/HTM2010.html
+    HTM2012: /products/HTM2015.html
+    HTM2015: /products/HTM2015.html
+  HCZ:
+    HCZ1083: /products/HCZ1083.html
+    HCZ1086: /products/HCZ1086.html
+    HCZ1086B: /products/HCZ1086B.html
+    HCZ1086F: /products/HCZ1086F.html
+    HCZ1086H1: /products/HCZ1086H1.html
+  HBZ:
+    HBZ1053: /products/HBZ1053.html
+    HBZ1056: /products/HBZ1056.html
+    HBZ1058: /products/HBZ1058.html
+    HBC1061: /products/HBC1061.html
+    HBC1063: /products/HBC1063.html
+    HBC1065: /products/HBC1065.html
+  HAC:
+    HAC316A: /products/HAC316A.html
