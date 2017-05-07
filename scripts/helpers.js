@@ -6,8 +6,6 @@ var url = require('url');
 var cheerio = require('cheerio');
 var lunr = require('lunr');
 
-var localizedPath = ['docs', 'api'];
-
 function startsWith(str, start){
   return str.substring(0, start.length) === start;
 }
@@ -69,10 +67,9 @@ hexo.extend.helper.register('header_menu', function(className){
   var result = '';
   var self = this;
   var lang = this.page.lang;
-  var isEnglish = lang === 'en';
 
   _.each(menu, function(path, title){
-    if (!isEnglish && ~localizedPath.indexOf(title)) path = lang + path;
+    if (lang !== 'zh-cn') path = lang + path;
 
     result += '<a href="' + self.url_for(path) + '" class="' + className + '-link">' + self.__('menu.' + title) + '</a>';
   });
@@ -82,7 +79,7 @@ hexo.extend.helper.register('header_menu', function(className){
 
 hexo.extend.helper.register('canonical_url', function(lang){
   var path = this.page.canonical_path;
-  if (lang && lang !== 'en') path = lang + '/' + path;
+  if (lang && lang !== 'zh-cn') path = lang + '/' + path;
 
   return this.config.url + '/' + path;
 });
@@ -91,7 +88,7 @@ hexo.extend.helper.register('url_for_lang', function(path){
   var lang = this.page.lang;
   var url = this.url_for(path);
 
-  if (lang !== 'en' && url[0] === '/') url = '/' + lang + url;
+  if (lang !== 'zh-cn' && url[0] === '/') url = '/' + lang + url;
 
   return url;
 });
@@ -133,13 +130,7 @@ hexo.extend.helper.register('lunr_index', function(data){
 });
 
 hexo.extend.helper.register('canonical_path_for_nav', function(){
-  var path = this.page.canonical_path;
-
-  if (startsWith(path, 'docs/') || startsWith(path, 'api/')){
-    return path;
-  } else {
-    return '';
-  }
+  return this.page.canonical_path;
 });
 
 hexo.extend.helper.register('lang_name', function(lang){
